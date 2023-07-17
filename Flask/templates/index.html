@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,4 +22,38 @@
     </form>
 
 </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Home</title>
+  </head>
+  <body>
+      <div class="title"><h4>AI-Powered Note Maker</h4></div>
+    <div class="input">
+      <div class="audioinput">
+        <p>Summarize from class recording:</p>
+        <form action="/summarize" method="POST" enctype="multipart/form-data">
+          <input type="file" name="audioFile" id="audioFile" />
+          <input type="submit" value="Generate" />
+        </form>
+      </div>
+      <div class="or">
+          <div class="hr"> </div>
+          <h2>OR</h2>
+          <div class="hr"> </div>
+      </div>
+      <div class="textinput">
+        <p>Keypoints from study materials:</p>
+        <form action="/keypoints" method="post" enctype="multipart/form-data">
+          <textarea name="sourceText" cols="30" rows="10"></textarea>
+          <input type="submit" value="Generate" />
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
